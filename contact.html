@@ -13,7 +13,7 @@
 		<link rel="icon" type="image/png" sizes="192x192" href="./assets/img/favicon/android-chrome-192x192.png">
 		<link rel="icon" type="image/png" sizes="512x512" href="./assets/img/favicon/android-chrome-512x512.png">
 		<link rel="manifest" href="./assets/img/favicon/site.webmanifest">
-		<title>Werd - Our Team</title>
+		<title>Werd - Contact Us</title>
 		<style>
 			body {
       opacity: 0;
@@ -34,13 +34,115 @@
         visibility: visible;
       }
     }
+
+			.page {
+				margin-bottom: 200px;
+			}
+			.contact {
+				padding: 10rem 0 0;
+				position: relative;
+				z-index: 1;
+			}
+			.contact__hero {
+				max-width: 62.5rem;
+				margin: 0 auto 4rem;
+				padding: 0 1.25rem;
+				text-align: center;
+			}
+			.contact__hero-text {
+				font-family: 'Sequel Sans', sans-serif;
+				font-weight: 300;
+				font-size: clamp(0.9375rem, 1.5vw, 1.1875rem);
+				color: #6B6D72;
+				line-height: 1.6;
+				max-width: 32rem;
+				margin: 1.5rem auto 0;
+			}
+			.contact__container {
+				max-width: 40rem;
+				margin: 0 auto;
+				padding: 0 1.25rem;
+				width: 100%;
+			}
+			.contact__form-wrapper {
+				border: 1px solid #D1D3D6;
+				border-radius: 1rem;
+				padding: 2.5rem;
+			}
+			.contact__form-heading {
+				font-family: 'Sequel Sans', sans-serif;
+				font-weight: 400;
+				font-size: clamp(1.25rem, 2vw, 1.5rem);
+				color: #1A1B1E;
+				margin-bottom: 0.375rem;
+			}
+			.contact__form-subheading {
+				font-family: 'Sequel Sans', sans-serif;
+				font-weight: 300;
+				font-size: 0.9375rem;
+				color: #6B6D72;
+				margin-bottom: 2rem;
+			}
+			.contact__form {
+				display: flex;
+				flex-direction: column;
+				gap: 1.25rem;
+			}
+			@media (max-width: 767.98px) {
+				.contact__form-wrapper {
+					padding: 1.5rem;
+				}
+			}
+			.contact__field {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+			.contact__label {
+				font-family: 'Sequel Sans', sans-serif;
+				font-weight: 400;
+				font-size: 0.875rem;
+				color: #3D3F43;
+				letter-spacing: 0.02em;
+			}
+			.contact__input,
+			.contact__textarea {
+				font-family: 'Sequel Sans', sans-serif;
+				font-weight: 300;
+				font-size: 1rem;
+				color: #1A1B1E;
+				background: #fff;
+				border: 1px solid #D1D3D6;
+				border-radius: 0.625rem;
+				padding: 0.875rem 1rem;
+				outline: none;
+				transition: border-color 0.3s ease;
+			}
+			.contact__input::placeholder,
+			.contact__textarea::placeholder {
+				color: #B1B2B4;
+			}
+			.contact__input:focus,
+			.contact__textarea:focus {
+				border-color: #2D5BFF;
+			}
+			.contact__textarea {
+				resize: vertical;
+				min-height: 8rem;
+			}
+			.contact__submit {
+				margin-top: 0.5rem;
+				align-self: stretch;
+			}
+			.contact__submit .button {
+				width: 100%;
+				justify-content: center;
+			}
 		</style>
-		<script type="module" crossorigin="" src="./js/our-team.min.js?v=1772284453775"></script>
+		<script type="module" crossorigin="" src="./js/main.min.js?v=1772284453775"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/splitText.min.js?v=1772284453775">
 		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1772284453775">
-		<link rel="modulepreload" crossorigin="" href="./js/main.min.js?v=1772284453775">
 		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1772284453775">
-		<link rel="stylesheet" crossorigin="" href="./css/our-team.min.css?v=1772284453775">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -78,7 +180,7 @@
 										<a href="./#partnerSection" class="menu__link" data-split-text="">Partnerships</a>
 									</li>
 									<li class="menu__item">
-										<a href="our-team.html" class="menu__link active" data-split-text="">Our Team</a>
+										<a href="our-team.html" class="menu__link" data-split-text="">Our Team</a>
 									</li>
 									<li class="menu__item">
 										<a href="./#newsSection" class="menu__link" data-split-text="">Latest News</a>
@@ -107,7 +209,7 @@
 							<a href="contact.html" class="header__button button small blue">
 								<span>Contact Us</span>
 							</a>
-							<a href="#" class="header__button button small grey">
+							<a href="./" class="header__button button small grey">
 								<span>Learn More</span>
 							</a>
 						</div>
@@ -115,91 +217,46 @@
 				</div>
 			</header>
 			<main class="page">
-				<section class="team">
-					<div class="team__container">
-						<div class="team__header">
-							<h2 class="team__header-title header-title animate" data-each-word-animate="" data-fls-watcher-threshold="0.65" data-fls-watcher-once="" data-fls-watcher="">
-								<span class="header-title__row">
-									<span>Our</span>
-									<span>Team</span>
-								</span>
-							</h2>
-							<div class="team__header-bottom">
-								<nav class="team__header-filters">
-									<button type="button" data-filter="all" class="is-active"></button>
-									<button type="button" data-filter="leadership"></button>
-									<button type="button" data-filter="core-team"></button>
-									<button type="button" data-filter="advisor"></button>
-								</nav>
-								<a href="contact.html" class="team__header-button button blue">
-									<span>Contact us</span>
-								</a>
-							</div>
-						</div>
-						<div class="team__cards"></div>
+				<section class="contact">
+					<div class="contact__hero">
+						<h1 class="header-title animate" data-each-word-animate="" data-fls-watcher-threshold="0.65" data-fls-watcher-once="" data-fls-watcher="">
+							<span class="header-title__row">
+								<span class="blue">Partner</span>
+								<span class="blue">With</span>
+								<span>WERD.</span>
+							</span>
+							<span class="header-title__row">
+								<span>Let's</span>
+								<span>Build</span>
+								<span class="blue">Together</span>
+							</span>
+						</h1>
+						<p class="contact__hero-text">We partner with teams looking to design, build and scale their apps. Reach out and tell us about your vision!</p>
 					</div>
-				</section>
-				<section class="partner" id="partnerSection">
-					<div class="partner__bg">
-						<picture>
-							<source srcset="./assets/img/main-page/partner/bg-large.webp" media="(min-width: 1920.98px)">
-							<source srcset="./assets/img/main-page/partner/bg-1920.webp" media="(min-width: 767.98px)">
-							<img alt="bg" src="./assets/img/main-page/partner/bg-mob.webp">
-						</picture>
-					</div>
-					<div class="partner__container">
-						<div class="partner__content">
-							<div class="partner__content-header">
-								<h2 class="partner__content-header-title header-title animate" data-each-word-animate="" data-fls-watcher-threshold="0.65" data-fls-watcher-once="" data-fls-watcher="">
-									<span class="header-title__row">
-										<span class="blue">Partner</span>
-										<span class="blue">With</span>
-										<span>WERD.</span>
-									</span>
-									<span class="header-title__row">
-										<span>Let’s</span>
-										<span>Build</span>
-										<span class="blue">Together</span>
-									</span>
-								</h2>
-								<p class="partner__content-header-text header-text" data-fls-watcher-threshold="0.95" data-fls-watcher-once="" data-fls-watcher="">
-									We partner with teams looking to design, build and scale their apps.
-          Reach out and tell us about your vision!
-								</p>
+					<div class="contact__container">
+						<div class="contact__form-wrapper">
+							<h2 class="contact__form-heading">Send us a message</h2>
+							<p class="contact__form-subheading">We'll get back to you as soon as possible.</p>
+							<form class="contact__form" action="https://formspree.io/f/xojnowkk" method="POST">
+							<div class="contact__field">
+								<label class="contact__label" for="name">Name</label>
+								<input class="contact__input" type="text" id="name" name="name" placeholder="Your name" required>
 							</div>
-							<div class="partner__content-buttons" data-fls-watcher-threshold="0.95" data-fls-watcher-once="" data-fls-watcher="">
-								<a href="contact.html" class="partner__content-button button blue">
-									<span>Get in Touch</span>
-								</a>
-								<a href="#" class="partner__content-button button grey">
-									<span>Meet the team</span>
-								</a>
+							<div class="contact__field">
+								<label class="contact__label" for="email">Email</label>
+								<input class="contact__input" type="email" id="email" name="email" placeholder="your@email.com" required>
 							</div>
+							<div class="contact__field">
+								<label class="contact__label" for="message">Message</label>
+								<textarea class="contact__textarea" id="message" name="message" placeholder="Tell us about your project or idea..." required></textarea>
+							</div>
+							<div class="contact__submit">
+								<button type="submit" class="button blue">
+									<span>Send Message</span>
+								</button>
+							</div>
+							</form>
 						</div>
-						<div class="partner__image">
-							<div class="partner__image-bg">
-								<video muted autoplay loop playsinline="" webkit-playsinline="" disablepictureinpicture="" controlslist="nodownload nofullscreen noremoteplayback" src="./files/video/partners.mp4"></video>
-							</div>
-							<div class="partner__image-items">
-								<div class="partner__image-item">
-									<span></span>
-									<span>Brand Strategy & Identity</span>
-								</div>
-								<div class="partner__image-item">
-									<span></span>
-									<span>App & Game Development</span>
-								</div>
-								<div class="partner__image-item">
-									<span></span>
-									<span>AI & Blockchain Systems</span>
-								</div>
-								<div class="partner__image-item">
-									<span></span>
-									<span>Growth & Execution</span>
-								</div>
-							</div>
-						</div>
-						<h3 class="partner__sub-title header-sub-title" data-fls-watcher-threshold="0.95" data-fls-watcher-once="" data-fls-watcher="">Partnerships</h3>
 					</div>
 				</section>
 			</main>
