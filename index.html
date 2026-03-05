@@ -34,6 +34,28 @@
         visibility: visible;
       }
     }
+
+    .main-item-projects__content-title img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 62.5em) {
+      .main-item-projects__content {
+        width: 50% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      .main-item-projects__content-title img {
+        max-width: 60%;
+      }
+    }
+
+    @media (max-width: 47.99875em) {
+      .main-item-projects__content-title img {
+        display: none;
+      }
+    }
 		</style>
 		<script type="module" crossorigin="" src="./js/index.min.js?v=1772284453776"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/splitText.min.js?v=1772284453776">
@@ -213,7 +235,7 @@
 									</div>
 								</a>
 								<div class="main-item-projects__content">
-									<h2 class="main-item-projects__content-title project-title">Amino</h2>
+									<h2 class="main-item-projects__content-title project-title"><img src="./assets/img/main-page/projects/amino-logo.png" alt="Amino"></h2>
 									<p class="main-item-projects__content-text project-text">
 										The ultimate free AI food and health tracker that lets you snap a
             photo of your meal to instantly see your nutrition breakdown.
